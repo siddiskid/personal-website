@@ -1,0 +1,11 @@
+Model Information:
+* title:	clothes for expeditions
+* source:	https://sketchfab.com/3d-models/clothes-for-expeditions-a0d92add01cb486a93cc4942297e8264
+* author:	DEYMAR (https://sketchfab.com/deymar)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "clothes for expeditions" (https://sketchfab.com/3d-models/clothes-for-expeditions-a0d92add01cb486a93cc4942297e8264) by DEYMAR (https://sketchfab.com/deymar) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
