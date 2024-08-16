@@ -3,24 +3,29 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
-  45,
+  50,
   window.innerWidth / window.innerHeight,
   0.1,
-  1000
+  2000
 );
-camera.position.z = 40;
+camera.position.x = -34.695;
+camera.position.y = 17.297;
+camera.position.z = 102.742;
+camera.rotation.x = 0.0;
+camera.rotation.y = -28.21 * (Math.pi / 180);
+camera.rotation.y = 0.0;
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setAnimationLoop(animate);
-renderer.setClearColor(0xadd8e6, 1);
+renderer.setClearColor(0x000000, 1);
 document.getElementById("sceneSpace").appendChild(renderer.domElement);
 
-const light = new THREE.AmbientLight(0xffffff, 10, 100);
-light.position.set(10, 10, 10);
+const light = new THREE.AmbientLight(0x2e2e2e, 60);
+light.position.set(0, 0, 0);
 scene.add(light);
 
-const loader = new GLTFLoader().setPath("/clothes_for_expeditions/");
+const loader = new GLTFLoader().setPath("/test/");
 loader.load("scene.gltf", (gltf) => {
   const mesh = gltf.scene;
   mesh.position.set(0, -10, 0);
@@ -38,7 +43,11 @@ document.addEventListener("mousemove", function (e) {
 function animate() {
   camera.position.x += (mouseX - camera.position.x) * 0.1;
   camera.position.y += (mouseY - camera.position.y) * 0.1;
-  camera.lookAt(scene.position);
+  camera.lookAt(10, 0, 0);
 
   renderer.render(scene, camera);
 }
+
+window.addEventListener("resize", (e) => {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
