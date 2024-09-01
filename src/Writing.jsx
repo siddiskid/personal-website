@@ -17,15 +17,60 @@ import {
   useFont,
 } from "@react-three/drei";
 
-const bloomColor = new Color("#fff");
-bloomColor.multiplyScalar(1.5);
+const textBloomColor = new Color("#fff");
+textBloomColor.multiplyScalar(1.5);
 
 export default function Writing(props) {
   return (
-    <group position-x={0} position-y={6.9033} position-z={9.9358}>
-      <Text font="fonts/Roboto/Roboto-Thin.ttf" scale={0.6}>
+    <group>
+      <Text
+        position-x={0}
+        position-y={6.9033}
+        position-z={9.9358}
+        font="fonts/Roboto/Roboto-Thin.ttf"
+        scale={0.6}
+      >
         Hey, I'm Siddarth
-        <meshBasicMaterial color={bloomColor} toneMapped={false} />
+        <meshBasicMaterial color={textBloomColor} toneMapped={false} />
+      </Text>
+      <Text
+        position-x={7.005}
+        position-y={5.8679}
+        position-z={12.5908}
+        rotation={[0, -0.7691, 0]}
+        font="fonts/Roboto/Roboto-Thin.ttf"
+        scale={0.3}
+        textAlign="left"
+      >
+        I am a passionate developer with {"\n"}keen interests in Artificial
+        Intelligence, {"\n"}Computer Vision, and Web Development.
+        <meshBasicMaterial color={textBloomColor} toneMapped={false} />
+      </Text>
+      <Text
+        position-x={9.013}
+        position-y={5.8679}
+        position-z={21.0908}
+        rotation={[0, -1.50568, 0]}
+        font="fonts/Roboto/Roboto-Thin.ttf"
+        scale={0.3}
+        textAlign="left"
+      >
+        I am a passionate developer with {"\n"}keen interests in Artificial
+        Intelligence, {"\n"}Computer Vision, and Web Development.
+        <meshBasicMaterial color={textBloomColor} toneMapped={false} />
+      </Text>
+      <Text
+        position-x={6.7001}
+        position-y={5.8679}
+        position-z={28.9708}
+        rotation={[0, -2.1837, 0]}
+        font="fonts/Roboto/Roboto-Thin.ttf"
+        scale={0.3}
+        textAlign="left"
+      >
+        I am a passionate developer with {"\n"}keen interests in Artificial
+        Intelligence, {"\n"}Computer Vision, and Web Development.
+        <meshBasicMaterial color={textBloomColor} toneMapped={false} />
       </Text>
     </group>
   );

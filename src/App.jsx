@@ -43,11 +43,12 @@ export default function App() {
           <Writing />
           <Room />
         </ScrollControls>
+        {/* <OrbitControls /> */}
       </Suspense>
       <directionalLight position={[0.485, 5.41, 6.731]} intensity={1} />
-      <ambientLight intensity={1} />
+      <ambientLight intensity={0.1} />
       <EffectComposer>
-        <Bloom mipmapBlur intensity={1.2} />
+        <Bloom mipmapBlur intensity={2} />
       </EffectComposer>
     </Canvas>
   );
