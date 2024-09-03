@@ -14,13 +14,18 @@ import {
   useGLTF,
   useAnimations,
   Html,
+  RenderTexture,
+  PerspectiveCamera,
+  Text,
 } from "@react-three/drei";
+import "./styles.css";
+import ProjectList from "./ProjectList";
 
-const roomBloomColor = new Color("#fff");
-const keyboardBloomColor = new Color("fff");
-const monitorBloomColor = new Color("fff");
-const mousepadBloomColor = new Color("fff");
-const tableBloomColor = new Color("fff");
+const roomBloomColor = new Color("#ffffff");
+const keyboardBloomColor = new Color("ffffff");
+const monitorBloomColor = new Color("ffffff");
+const mousepadBloomColor = new Color("ffffff");
+const tableBloomColor = new Color("ffffff");
 
 roomBloomColor.multiplyScalar(1.5);
 keyboardBloomColor.multiplyScalar(1.5);
@@ -261,8 +266,19 @@ export default function Room(props) {
         />
         <mesh
           geometry={nodes.Plane006_1.geometry}
-          material={materials.Screen}
-        />
+          material={materials.Screen} // SCREEN PUT STUFF HERE
+        >
+          <meshStandardMaterial />
+          <Html
+            position={[-3, 6.017, 35.726]}
+            rotation={[0, 2.9, 0]}
+            scale={0.25}
+            transform
+            portal={{ current: scroll.fixed }}
+          >
+            <ProjectList />
+          </Html>
+        </mesh>
       </group>
       <mesh
         geometry={nodes.Table.geometry}
@@ -272,25 +288,19 @@ export default function Room(props) {
         scale={[4.336, 1.35, 1.35]}
       />
       <mesh
-        geometry={nodes.Scroll.geometry}
-        material={nodes.Scroll.material}
         position={[-4.15, 6.017, 35.726]}
         rotation={[Math.PI / 2, 0, 0.466]}
-        scale={[4.65, 0.1, 6.214]}
+      />
+      <meshStandardMaterial />
+      <Html
+        position={[-4.15, 6.017, 35.726]}
+        rotation={[0, 2.9, 0]}
+        scale={0.25}
+        transform
+        portal={{ current: scroll.fixed }}
       >
-        <Html
-          className="content"
-          rotation-x={-Math.PI / 2}
-          rotation-z={0.466}
-          position={[-4.15, 6.017, 35.726]}
-          transform
-          occlude
-        >
-          <div className="wrapper">
-            <h1>Hi</h1>
-          </div>
-        </Html>
-      </mesh>
+        <ProjectList />
+      </Html>
       <mesh
         geometry={nodes.Cube001.geometry}
         material={materials["Material.001"]}

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("public/fonts/Roboto/Roboto-Thin.ttf");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.wrapper {
+  font-family: "Roboto-Thin";
+  font-size: 12px;
+  width: 110px;
+  height: 160px;
+  overflow: auto;
+  transform: scale(4);
+}
+
+.text {
+  margin-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
+}
+
+a {
+  text-decoration: none;
+  transition-duration: 100ms;
+}
+
+a:visited {
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
+}
+
+a:hover {
+  text-shadow: 0 0 1px #fff, 0 0 5px #fff;
+  transition-duration: 100ms;
+}
