@@ -1,17 +1,10 @@
 import "./App.css";
-import {
-  Stats,
-  OrbitControls,
-  Circle,
-  Html,
-  ScrollControls,
-} from "@react-three/drei";
+import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import Room from "./components/Room";
 import { Vector3 } from "three";
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense } from "react";
 import Writing from "./Writing";
 
 const PosLog = () => {

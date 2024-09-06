@@ -1,6 +1,21 @@
 @font-face {
   font-family: "Roboto-Thin";
-  src: url("public/fonts/Roboto/Roboto-Thin.ttf");
+  src: url("/fonts/Roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("/fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/fonts/Roboto/Roboto-Light.ttf");
 }
 
 ::-webkit-scrollbar {
@@ -17,9 +32,9 @@
 }
 
 .text {
-  margin-top: 5px;
   padding-bottom: 2px;
   padding-left: 10px;
+  padding-top: 5px;
   color: #fff;
   text-shadow: 0 0 1px #fff;
 }
@@ -37,4 +52,42 @@ a:visited {
 a:hover {
   text-shadow: 0 0 1px #fff, 0 0 5px #fff;
   transition-duration: 100ms;
+}
+
+.project {
+  width: 1260px;
+  height: 703.125px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectWrapper {
+  margin-left: 30px;
+  margin-right: 100px;
+}
+
+.projectNameIntro {
+  font-size: 40px;
+  font-family: "Roboto-Regular";
+  padding-bottom: 10px;
+}
+
+.projectName {
+  font-size: 50px;
+  font-family: "Roboto-Regular";
+  padding-bottom: 10px;
+}
+
+.projectDesc {
+  font-size: 28px;
+  padding-bottom: 20px;
+  font-family: "Roboto-Light";
+}
+
+.icon {
+  object-fit: cover;
+  height: 70px;
+  padding-right: 25px;
 }

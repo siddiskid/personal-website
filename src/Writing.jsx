@@ -5,22 +5,12 @@ Command: npx gltfjsx@6.5.0 public/models/table.glb
 
 import React from "react";
 import { Color } from "three";
-import { Suspense, useEffect, useLayoutEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import {
-  ScrollControls,
-  Sky,
-  useScroll,
-  useGLTF,
-  useAnimations,
-  Text,
-  useFont,
-} from "@react-three/drei";
+import { Text, useFont } from "@react-three/drei";
 
 const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
 
-export default function Writing(props) {
+export default function Writing() {
   return (
     <group>
       <Text
