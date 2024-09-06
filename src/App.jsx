@@ -3,9 +3,12 @@ import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import Room from "./components/Room";
+import { Color } from "three";
 import { Vector3 } from "three";
 import { Suspense } from "react";
 import Writing from "./Writing";
+
+const worldColor = new Color("#0d0015");
 
 const PosLog = () => {
   const cameraWorldPosition = new Vector3();
@@ -30,7 +33,7 @@ export default function App() {
       }}
     >
       {/* <PosLog /> */}
-      <color args={[0, 0, 0]} attach={"background"} />
+      <color args={[worldColor]} attach={"background"} />
       <Suspense fallback={null}>
         <ScrollControls pages={5}>
           <Writing />

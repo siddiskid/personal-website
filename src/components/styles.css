@@ -82,6 +82,7 @@ a:hover {
 
 .projectDesc {
   font-size: 28px;
+  line-height: 1.5;
   padding-bottom: 20px;
   font-family: "Roboto-Light";
 }

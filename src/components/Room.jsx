@@ -9,6 +9,7 @@ import { useFrame } from "@react-three/fiber";
 import { useScroll, useGLTF, Html } from "@react-three/drei";
 import "./styles.css";
 import Project from "./Project";
+import Stars from "./Stars";
 
 const roomBloomColor = new Color("#ffffff");
 const keyboardBloomColor = new Color("ffffff");
@@ -45,6 +46,9 @@ const projList = {
   ],
 };
 
+// const CAMERA_FINAL_POSITION = [0.9772, 5.523, 28.9418];
+// const CAMERA_FINAL_ROTATION = [0, 2.9442 - 2 * Math.PI, 0];
+
 export default function Room(props) {
   const { nodes, materials } = useGLTF("./models/table.glb");
   const CAMERA_INITIAL_POSITION = [0, 5.7533, 14.4358];
@@ -61,8 +65,20 @@ export default function Room(props) {
   const [currProjStack, updateCurrProjStack] = useState(["NONE"]);
 
   const scroll = useScroll();
+  // let mouseX = 0;
+
+  // CAMERA_INITIAL_POSITION[0] +
+  //   (CAMERA_FINAL_POSITION[0] - CAMERA_INITIAL_POSITION[0]) * offset +
+  //   (mouseX -
+  //     (CAMERA_INITIAL_POSITION[0] +
+  //       (CAMERA_FINAL_POSITION[0] - CAMERA_INITIAL_POSITION[0]) * offset)) *
+  //     0.05,
   useFrame((state, delta) => {
     const offset = scroll.offset;
+    // mouseX =
+    //   (state.pointer.x * window.innerWidth - window.innerWidth / 2) / 100;
+
+    // console.log(state.pointer.x * window.innerWidth);
 
     state.camera.position.set(
       CAMERA_INITIAL_POSITION[0] +
@@ -233,45 +249,45 @@ export default function Room(props) {
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0.287}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.Back.geometry}
         material={materials.Wall}
         position={[0, 6.027, 0]}
         rotation={[Math.PI / 2, 0, -3.142]}
         scale={[-53.681, -53.681, -24.108]}
-      />
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Left_wall.geometry}
         material={materials.Wall}
         position={[13.419, 6.027, 18.77]}
         rotation={[Math.PI / 2, 0, 1.571]}
         scale={[-75.076, -53.681, -24.108]}
-      />
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Window.geometry}
         material={materials.Wall}
         position={[-0.002, 6.027, 37.538]}
         rotation={[Math.PI / 2, 0, -3.142]}
         scale={[-53.681, -53.681, -24.108]}
-      />
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Right_wall.geometry}
         material={materials.Wall}
         position={[-13.421, 6.027, 18.768]}
         rotation={[Math.PI / 2, 0, 1.571]}
         scale={[-75.076, -53.681, -24.108]}
-      />
+      /> */}
+      {/* <mesh
+        geometry={nodes.Roof.geometry}
+        material={materials.Wall}
+        position={[0, 12.054, 18.769]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-53.678, -1, -75.076]}
+      /> */}
       <mesh
         geometry={nodes.Floor.geometry}
         material={materials.Wall}
         position={[0, 0.1, 18.769]}
-        rotation={[0, 0, -Math.PI]}
-        scale={[-53.678, -1, -75.076]}
-      />
-      <mesh
-        geometry={nodes.Roof.geometry}
-        material={materials.Wall}
-        position={[0, 12.054, 18.769]}
         rotation={[0, 0, -Math.PI]}
         scale={[-53.678, -1, -75.076]}
       />
@@ -312,7 +328,7 @@ export default function Room(props) {
       />
       <mesh
         position={[-4.15, 6.017, 35.726]}
-        rotation={[Math.PI / 2, 0, 0.466]}
+        rotation={[Math.PI / 2, 0, 0.466]} // SIDE SCREEN PUT STUFF HERE
       />
       <meshStandardMaterial />
       <Html
@@ -1137,47 +1153,41 @@ export default function Room(props) {
       >
         <meshBasicMaterial color={mousepadBloomColor} toneMapped={false} />
       </mesh>
-      <mesh
+      {/* <mesh
         geometry={nodes.Room_Neon_Lights_Front_Left.geometry}
         material={nodes.Room_Neon_Lights_Front_Left.material}
         position={[13.418, 6.027, 37.521]}
         scale={[-0.1, -25.319, -0.1]}
-      >
-        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
-      </mesh>
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Room_Neon_Lights_Front_Right.geometry}
         material={nodes.Room_Neon_Lights_Front_Right.material}
         position={[-13.418, 6.027, 37.521]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[-0.1, -24.147, -0.1]}
-      >
-        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
-      </mesh>
+      />
       <mesh
         geometry={nodes.Room_Neon_Lights_Back_Right.geometry}
         material={nodes.Room_Neon_Lights_Back_Right.material}
         position={[13.418, 6.027, 0]}
         scale={[-0.1, -25.319, -0.1]}
-      >
-        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
-      </mesh>
+      />
       <mesh
         geometry={nodes.Room_Neon_Lights_Back_Left.geometry}
         material={nodes.Room_Neon_Lights_Back_Left.material}
         position={[-13.418, 6.027, 0]}
         scale={[-0.1, -25.319, -0.1]}
-      >
-        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
-      </mesh>
+      /> */}
       <mesh
         geometry={nodes.Room_Neon_Lights_Back_Bottom.geometry}
         material={nodes.Room_Neon_Lights_Back_Bottom.material}
         position={[0, 0.107, 0]}
         rotation={[1.571, 0, -1.571]}
         scale={[-0.1, -53.74, -0.1]}
-      />
-      <mesh
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh>
+      {/* <mesh
         geometry={nodes.Room_Neon_Lights_Back_Top.geometry}
         material={nodes.Room_Neon_Lights_Back_Top.material}
         position={[0, 12.042, 0]}
@@ -1190,42 +1200,48 @@ export default function Room(props) {
         position={[0, 12.052, 37.521]}
         rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
         scale={[-0.1, -53.74, -0.1]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Room_Neon_Lights_Front_Bottom.geometry}
         material={nodes.Room_Neon_Lights_Front_Bottom.material}
         position={[0, 0.107, 37.521]}
         rotation={[1.571, 0, -1.571]}
         scale={[-0.1, -53.74, -0.1]}
-      />
-      <mesh
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh>
+      {/* <mesh
         geometry={nodes.Room_Neon_Lights_Left_Top.geometry}
         material={nodes.Room_Neon_Lights_Left_Top.material}
         position={[13.423, 12.045, 18.769]}
         rotation={[1.571, 0, 3.141]}
         scale={[-0.1, -76.874, -0.1]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Room_Neon_Lights_Left_Bottom.geometry}
         material={nodes.Room_Neon_Lights_Left_Bottom.material}
         position={[13.423, 0.107, 18.769]}
         rotation={[1.571, 0, 3.141]}
-        scale={[-0.1, -76.874, -0.1]}
-      />
-      <mesh
+        scale={[-0.1, -74.8, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh>
+      {/* <mesh
         geometry={nodes.Room_Neon_Lights_Right_Top.geometry}
         material={nodes.Room_Neon_Lights_Right_Top.material}
         position={[-13.423, 12.045, 18.769]}
         rotation={[1.571, 0, 3.141]}
         scale={[-0.1, -76.874, -0.1]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Room_Neon_Lights_Right_Bottom.geometry}
         material={nodes.Room_Neon_Lights_Right_Bottom.material}
         position={[-13.423, 0.107, 18.769]}
         rotation={[1.571, 0, 3.141]}
-        scale={[-0.1, -76.874, -0.1]}
-      />
+        scale={[-0.1, -74.8, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh>
       <mesh
         geometry={nodes.Table_neon_back_left.geometry}
         material={nodes.Table_neon_back_left.material}
@@ -1280,6 +1296,7 @@ export default function Room(props) {
       >
         <meshBasicMaterial color={tableBloomColor} toneMapped={false} />
       </mesh>
+      <Stars />
     </group>
   );
 }
