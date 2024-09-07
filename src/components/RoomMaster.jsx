@@ -24,20 +24,15 @@ mousepadBloomColor.multiplyScalar(1.5);
 tableBloomColor.multiplyScalar(1.5);
 
 const projList = {
+  "Ryu's Conquest": [
+    "https://github.com/siddiskid/Snakes-and-Hackers-II",
+    "Once upon a time, a village is invaded by an army of malevolent robots. Upon leaving, they took away the most valuable things in the world, games. While the inhabitants of the village were filled with sadness, a brave warrior named Ryu has decided to step up and go on a quest to bring back the games. To do that, he need to beat the robots in four famous games on planet Xamos, Opus, Icrozar and Duex, respectively. Let’s see if he can beat the robots!",
+    ["JS", "React"],
+  ],
   micrograd_plus: [
     "https://github.com/siddiskid/micrograd_plus",
     "Inspired by Andrej Karpathy's micrograd, micrograd_plus is an autograd engine over scalar-valued Directed Acyclic Graphs. It extends micrograd by implementing additional activation functions, like sigmoid and relu, in addition to the included tanh along with a draw function that draws a DAG with all neurons and their gradients. micrograd_plus can be used to make neural networks for binary classification tasks",
     ["Python", "PyTorch", "Tensorflow"],
-  ],
-  worklearn_scraper: [
-    "https://github.com/siddiskid/worklearn_scraper",
-    "A web scraping application used to get job listing data from careers online on an excel sheet. Built to save time on reading job requirements and spend that on actually applying to jobs",
-    ["Python", "Excel", "Pandas"],
-  ],
-  "Ryu's Conquest": [
-    "https://github.com/siddiskid/Snakes-and-Hackers-II",
-    "Once upon a time, a village is invaded by an army of malevolent robots. Upon leaving, they took away the most valuable things in the world — games. While the inhabitants of the village were filled with sadness, a brave warrior named Ryu has decided to step up and go on a quest to bring back the games. To do that, he needs to beat the robots in four classic games on planet Xamos, Opus, Icrozar, and Duex. Let’s see if he can beat the robots!",
-    ["JS", "React"],
   ],
   "Budget Buddy": [
     "https://github.com/siddiskid/budget_buddy",
@@ -59,7 +54,7 @@ export default function Room(props) {
   const CAMERA_FINAL_ROTATION = [0, 2.9442 - 2 * Math.PI, 0];
 
   const [currProj, updateCurrProj] = useState(
-    "Hover on a project to preview, click on it to check it out"
+    "Hover on a project to get started, click on it to check it out"
   );
 
   const [currProjDesc, updateCurrProjDesc] = useState("NONE");
@@ -237,6 +232,48 @@ export default function Room(props) {
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0.287}
       />
+      {/* <mesh
+        geometry={nodes.Back.geometry}
+        material={materials.Wall}
+        position={[0, 6.027, 0]}
+        rotation={[Math.PI / 2, 0, -3.142]}
+        scale={[-53.681, -53.681, -24.108]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Left_wall.geometry}
+        material={materials.Wall}
+        position={[13.419, 6.027, 18.77]}
+        rotation={[Math.PI / 2, 0, 1.571]}
+        scale={[-75.076, -53.681, -24.108]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Window.geometry}
+        material={materials.Wall}
+        position={[-0.002, 6.027, 37.538]}
+        rotation={[Math.PI / 2, 0, -3.142]}
+        scale={[-53.681, -53.681, -24.108]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Right_wall.geometry}
+        material={materials.Wall}
+        position={[-13.421, 6.027, 18.768]}
+        rotation={[Math.PI / 2, 0, 1.571]}
+        scale={[-75.076, -53.681, -24.108]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Roof.geometry}
+        material={materials.Wall}
+        position={[0, 12.054, 18.769]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-53.678, -1, -75.076]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Floor.geometry}
+        material={materials.Wall}
+        position={[0, 0.1, 18.769]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-53.678, -1, -75.076]}
+      /> */}
       <group
         position={[0.543, 6.017, 37.038]}
         rotation={[Math.PI / 2, 0, -3.142]}
@@ -246,7 +283,10 @@ export default function Room(props) {
           geometry={nodes.Plane006.geometry}
           material={materials["Glossy material"]}
         />
-        <mesh geometry={nodes.Plane006_1.geometry} material={materials.Screen}>
+        <mesh
+          geometry={nodes.Plane006_1.geometry}
+          material={materials.Screen} // SCREEN PUT STUFF HERE
+        >
           <meshStandardMaterial />
           <Html
             position={[-0.05, 0, 0]}
@@ -271,7 +311,7 @@ export default function Room(props) {
       />
       <mesh
         position={[-4.15, 6.017, 35.726]}
-        rotation={[Math.PI / 2, 0, 0.466]}
+        rotation={[Math.PI / 2, 0, 0.466]} // SIDE SCREEN PUT STUFF HERE
       />
       <meshStandardMaterial />
       <Html
@@ -284,7 +324,6 @@ export default function Room(props) {
         <div className="wrapper">
           {Object.entries(projList).map(([key, value]) => (
             <div
-              key={value[0]}
               className="text"
               onMouseEnter={() => {
                 updateCurrProj(key);
@@ -294,7 +333,7 @@ export default function Room(props) {
               }}
               onMouseLeave={() => {
                 updateCurrProj(
-                  "Hover on a project to preview, click on it to check it out"
+                  "Hover on a project to get started, click on it to check it out"
                 );
                 updateCurrProjDesc("NONE");
                 updateCurrProjStack("NONE");
@@ -1097,6 +1136,95 @@ export default function Room(props) {
       >
         <meshBasicMaterial color={mousepadBloomColor} toneMapped={false} />
       </mesh>
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Front_Left.geometry}
+        material={nodes.Room_Neon_Lights_Front_Left.material}
+        position={[13.418, 6.027, 37.521]}
+        scale={[-0.1, -25.319, -0.1]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Front_Right.geometry}
+        material={nodes.Room_Neon_Lights_Front_Right.material}
+        position={[-13.418, 6.027, 37.521]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={[-0.1, -24.147, -0.1]}
+      />
+      <mesh
+        geometry={nodes.Room_Neon_Lights_Back_Right.geometry}
+        material={nodes.Room_Neon_Lights_Back_Right.material}
+        position={[13.418, 6.027, 0]}
+        scale={[-0.1, -25.319, -0.1]}
+      />
+      <mesh
+        geometry={nodes.Room_Neon_Lights_Back_Left.geometry}
+        material={nodes.Room_Neon_Lights_Back_Left.material}
+        position={[-13.418, 6.027, 0]}
+        scale={[-0.1, -25.319, -0.1]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Back_Bottom.geometry}
+        material={nodes.Room_Neon_Lights_Back_Bottom.material}
+        position={[0, 0.107, 0]}
+        rotation={[1.571, 0, -1.571]}
+        scale={[-0.1, -53.74, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Back_Top.geometry}
+        material={nodes.Room_Neon_Lights_Back_Top.material}
+        position={[0, 12.042, 0]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+        scale={[-0.1, -53.74, -0.1]}
+      />
+      <mesh
+        geometry={nodes.Room_Neon_Lights_Front_Top.geometry}
+        material={nodes.Room_Neon_Lights_Front_Top.material}
+        position={[0, 12.052, 37.521]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+        scale={[-0.1, -53.74, -0.1]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Front_Bottom.geometry}
+        material={nodes.Room_Neon_Lights_Front_Bottom.material}
+        position={[0, 0.107, 37.521]}
+        rotation={[1.571, 0, -1.571]}
+        scale={[-0.1, -53.74, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Left_Top.geometry}
+        material={nodes.Room_Neon_Lights_Left_Top.material}
+        position={[13.423, 12.045, 18.769]}
+        rotation={[1.571, 0, 3.141]}
+        scale={[-0.1, -76.874, -0.1]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Left_Bottom.geometry}
+        material={nodes.Room_Neon_Lights_Left_Bottom.material}
+        position={[13.423, 0.107, 18.769]}
+        rotation={[1.571, 0, 3.141]}
+        scale={[-0.1, -74.8, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Right_Top.geometry}
+        material={nodes.Room_Neon_Lights_Right_Top.material}
+        position={[-13.423, 12.045, 18.769]}
+        rotation={[1.571, 0, 3.141]}
+        scale={[-0.1, -76.874, -0.1]}
+      /> */}
+      {/* <mesh
+        geometry={nodes.Room_Neon_Lights_Right_Bottom.geometry}
+        material={nodes.Room_Neon_Lights_Right_Bottom.material}
+        position={[-13.423, 0.107, 18.769]}
+        rotation={[1.571, 0, 3.141]}
+        scale={[-0.1, -74.8, -0.1]}
+      >
+        <meshBasicMaterial color={roomBloomColor} toneMapped={false} />
+      </mesh> */}
       <mesh
         geometry={nodes.Table_neon_back_left.geometry}
         material={nodes.Table_neon_back_left.material}
