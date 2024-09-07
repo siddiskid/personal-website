@@ -26,6 +26,7 @@ const techStack = {
   ExpressJS: [11, "icons/ExpressJSLogo.png"],
   Firebase: [12, "icons/FirebaseLogo.png"],
   ThreeJS: [13, "icons/ThreeJSLogo.png"],
+  Node: [14, "icons/NodeLogo.png"],
   Flutter: [14, "icons/FlutterLogo.png"],
   "C++": [15, "icons/C++Logo.png"],
   C: [16, "icons/CLogo.png"],
