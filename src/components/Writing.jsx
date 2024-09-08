@@ -1,7 +1,7 @@
 import { TextureLoader } from "three";
 import React from "react";
 import { Color } from "three";
-import { Text, useFont } from "@react-three/drei";
+import { Html, Text, useFont, useScroll } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 
 const textBloomColor = new Color("#fff");
@@ -31,9 +31,20 @@ const techStack = {
 };
 
 export default function Writing() {
+  const scroll = useScroll();
+
   return (
     <group>
-      <Text
+      <Html
+        position-x={0}
+        position-y={6.9033}
+        position-z={9.9358}
+        transform
+        portal={{ current: scroll.fixed }}
+      >
+        <div className="helloText">Hey, I'm Siddarth</div>
+      </Html>
+      {/* <Text
         position-x={0}
         position-y={6.9033}
         position-z={9.9358}
@@ -42,8 +53,22 @@ export default function Writing() {
       >
         Hey, I'm Siddarth
         <meshBasicMaterial color={textBloomColor} toneMapped={false} />
-      </Text>
-      <Text
+      </Text> */}
+      <Html
+        position-x={7.005}
+        position-y={5.8679}
+        position-z={12.5908}
+        rotation={[0, -0.7691, 0]}
+        transform
+        portal={{ current: scroll.fixed }}
+      >
+        <div className="introText">
+          I am a passionate developer with keen interests <br />
+          in Artificial Intelligence, Quantum Computing, <br />
+          and Computational Physics and Astrophysics
+        </div>
+      </Html>
+      {/* <Text
         position-x={7.005}
         position-y={5.8679}
         position-z={12.5908}
@@ -57,8 +82,41 @@ export default function Writing() {
         Intelligence, Quantum Computing,{"\n"}and Computational Physics and
         Astrophysics
         <meshBasicMaterial color={textBloomColor} toneMapped={false} />
-      </Text>
-      <Text
+      </Text> */}
+      <Html
+        position-x={9.013}
+        position-y={6.8679}
+        position-z={21.0908}
+        rotation={[0, -1.50568, 0]}
+        transform
+        portal={{ current: scroll.fixed }}
+      >
+        <div className="stackWraper">
+          <div className="stackText">My current tech stack includes:</div>
+          <div className="icons">
+            {Object.entries(techStack).map(([key, value]) => (
+              // <mesh
+              //   key={value[0]}
+              //   position-x={9.013}
+              //   position-y={6.2679 - Math.floor((value[0] - 1) / 7) * 0.75}
+              //   position-z={19.3808 + ((value[0] - 1) % 7) * 0.75}
+              //   rotation={[0, -1.50568, 0]}
+              //   scale={0.14}
+              // >
+              //   <planeGeometry attach="geometry" args={[4, 4]} />
+              //   <meshBasicMaterial
+              //     color={"white"}
+              //     attach="material"
+              //     map={useLoader(TextureLoader, value[1])}
+              //     toneMapped={true}
+              //   />
+              // </mesh>
+              <img className="logo" src={value[1]}></img>
+            ))}
+          </div>
+        </div>
+      </Html>
+      {/* <Text
         position-x={9.013}
         position-y={6.8679}
         position-z={21.0908}
@@ -96,7 +154,7 @@ export default function Writing() {
         //   url={value}
         //   scale={0.5}
         // ></Image>
-      ))}
+      ))} */}
       <Text
         position-x={6.7001}
         position-y={5.8679}
