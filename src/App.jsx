@@ -30,6 +30,7 @@ export default function App() {
         rotation: CAMERA_INITIAL_ROTATION,
         fov: 45,
       }}
+      frameloop="demand"
     >
       {/* <PosLog /> */}
       <color args={[worldColor]} attach={"background"} />
