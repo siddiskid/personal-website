@@ -92,3 +92,10 @@ a:hover {
   height: 70px;
   padding-right: 25px;
 }
+
+.scrollToNavigate {
+  font-family: "Roboto-Light";
+  font-size: 10px;
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
+}

@@ -1,5 +1,5 @@
 import "./App.css";
-import { ScrollControls } from "@react-three/drei";
+import { ScrollControls, Html } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import Room from "./components/Room";

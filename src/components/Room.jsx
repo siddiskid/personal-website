@@ -61,9 +61,7 @@ export default function Room(props) {
   const [currProj, updateCurrProj] = useState(
     "Hover on a project to preview, click on it to check it out"
   );
-
   const [currProjDesc, updateCurrProjDesc] = useState("NONE");
-
   const [currProjStack, updateCurrProjStack] = useState(["NONE"]);
 
   const scroll = useScroll();
@@ -89,6 +87,14 @@ export default function Room(props) {
   });
   return (
     <group {...props} dispose={null}>
+      <Html
+        position={[0, 0.25, 0]}
+        transform
+        portal={{ current: scroll.fixed }}
+      >
+        <div className="scrollToNavigate">Scroll to nagivate</div>
+      </Html>
+
       <group
         position={[-2.061, 3.809, 35.169]}
         rotation={[-Math.PI, 0, -Math.PI]}
