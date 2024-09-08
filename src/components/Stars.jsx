@@ -3,7 +3,7 @@ import { Color } from "three";
 import "./styles.css";
 import { useFrame } from "@react-three/fiber";
 
-let randomCoords = Array.from({ length: 1000 }, () => [
+let randomCoords = Array.from({ length: 500 }, () => [
   Math.floor(Math.random() * 100 - 50),
   Math.floor(Math.random() * 100 - 50),
   Math.floor(Math.random() * 100 - 50),

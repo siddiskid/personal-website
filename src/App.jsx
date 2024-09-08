@@ -20,14 +20,11 @@ const worldColor = new Color("#0d0015");
 // };
 
 export default function App() {
-  const CAMERA_INITIAL_POSITION = [0, 5.3533, 13.9358];
-  const CAMERA_INITIAL_ROTATION = [0, 0, 0];
-
   return (
     <Canvas
       camera={{
-        position: CAMERA_INITIAL_POSITION,
-        rotation: CAMERA_INITIAL_ROTATION,
+        position: [0, 5.3533, 13.9358],
+        rotation: [0, 0, 0],
         fov: 45,
       }}
       frameloop="demand"
