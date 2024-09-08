@@ -8,26 +8,26 @@ const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
 
 const techStack = {
-  Python: [1, "/icons/PythonLogo.svg"],
-  PyTorch: [2, "/icons/PyTorchLogo.png"],
-  Tensorflow: [3, "/icons/TensorflowLogo.webp"],
-  Numpy: [4, "icons/NumpyLogo.svg"],
-  Pandas: [5, "icons/PandasLogo.svg"],
-  Matplotlib: [6, "icons/MatplotlibLogo.png"],
-  Selenium: [7, "/icons/SeleniumLogo.png"],
-  JavaScript: [8, "/icons/JSLogo.png"],
-  React: [9, "/icons/ReactLogo.png"],
-  MongoDB: [10, "icons/MongoDBLogo.svg"],
-  ExpressJS: [11, "icons/ExpressJSLogo.png"],
-  Firebase: [12, "icons/FirebaseLogo.png"],
-  ThreeJS: [13, "icons/ThreeJSLogo.png"],
-  Node: [14, "icons/NodeLogo.png"],
-  Flutter: [14, "icons/FlutterLogo.png"],
-  "C++": [15, "icons/C++Logo.png"],
-  C: [16, "icons/CLogo.png"],
-  Java: [17, "/icons/JavaLogo.webp"],
-  R: [18, "icons/RLogo.png"],
-  Matlab: [19, "icons/MatlabLogo.png"],
+  Python: [1, "./public/icons/PythonLogo.svg"],
+  PyTorch: [2, "./public/icons/PyTorchLogo.png"],
+  Tensorflow: [3, "./public/icons/TensorflowLogo.webp"],
+  Numpy: [4, "./public/icons/NumpyLogo.svg"],
+  Pandas: [5, "./public/icons/PandasLogo.svg"],
+  Matplotlib: [6, "./public/icons/MatplotlibLogo.png"],
+  Selenium: [7, "./public/icons/SeleniumLogo.png"],
+  JavaScript: [8, "./public/icons/JSLogo.png"],
+  React: [9, "./public/icons/ReactLogo.png"],
+  MongoDB: [10, "./public/icons/MongoDBLogo.svg"],
+  ExpressJS: [11, "./public/icons/ExpressJSLogo.png"],
+  Firebase: [12, "./public/icons/FirebaseLogo.png"],
+  ThreeJS: [13, "./public/icons/ThreeJSLogo.png"],
+  Node: [14, "./public/icons/NodeLogo.png"],
+  Flutter: [14, "./public/icons/FlutterLogo.png"],
+  "C++": [15, "./public/icons/C++Logo.png"],
+  C: [16, "./public/icons/CLogo.png"],
+  Java: [17, "./public/icons/JavaLogo.webp"],
+  R: [18, "./public/icons/RLogo.png"],
+  Matlab: [19, "./public/icons/MatlabLogo.png"],
 };
 
 export default function Writing() {
@@ -37,7 +37,7 @@ export default function Writing() {
         position-x={0}
         position-y={6.9033}
         position-z={9.9358}
-        font="fonts/Roboto/Roboto-Thin.ttf"
+        font="./public/fonts/Roboto/Roboto-Thin.ttf"
         scale={0.5}
       >
         Hey, I'm Siddarth
@@ -48,7 +48,7 @@ export default function Writing() {
         position-y={5.8679}
         position-z={12.5908}
         rotation={[0, -0.7691, 0]}
-        font="fonts/Roboto/Roboto-Thin.ttf"
+        font="./public/fonts/Roboto/Roboto-Thin.ttf"
         scale={0.3}
         lineHeight={1.5}
         textAlign="left"
@@ -63,7 +63,7 @@ export default function Writing() {
         position-y={6.8679}
         position-z={21.0908}
         rotation={[0, -1.50568, 0]}
-        font="fonts/Roboto/Roboto-Thin.ttf"
+        font="./public/fonts/Roboto/Roboto-Thin.ttf"
         scale={0.3}
         lineHeight={1.5}
         textAlign="left"
@@ -102,7 +102,7 @@ export default function Writing() {
         position-y={5.8679}
         position-z={28.9708}
         rotation={[0, -2.1837, 0]}
-        font="fonts/Roboto/Roboto-Thin.ttf"
+        font="./public/fonts/Roboto/Roboto-Thin.ttf"
         scale={0.3}
         textAlign="left"
       >
@@ -113,4 +113,4 @@ export default function Writing() {
   );
 }
 
-useFont.preload("fonts/Roboto/Roboto-Thin.ttf");
+useFont.preload("./public/fonts/Roboto/Roboto-Thin.ttf");
