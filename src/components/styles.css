@@ -105,6 +105,7 @@ a:hover {
   font-size: 21px;
   color: #fff;
   text-shadow: 0 0 1px #fff;
+  transform: scale(8);
 }
 
 .introText {
@@ -112,6 +113,15 @@ a:hover {
   font-size: 14px;
   color: #fff;
   text-shadow: 0 0 1px #fff;
+  transform: scale(8);
+}
+
+.projectsText {
+  font-family: "Roboto-Thin";
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
+  transform: scale(8);
 }
 
 .stackText {
@@ -121,19 +131,20 @@ a:hover {
   text-shadow: 0 0 1px #fff;
 }
 
+.stackWrapper {
+  transform: scale(8);
+}
+
 .logo {
   object-fit: cover;
   height: 25px;
-  padding-right: 25px;
-}
-
-.stackWrapper {
-  width: 100px;
+  padding-right: 10px;
+  padding-top: 7px;
 }
 
 .icons {
-  width: 100px;
+  width: 250px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
