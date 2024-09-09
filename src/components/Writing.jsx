@@ -1,5 +1,5 @@
 import { TextureLoader } from "three";
-import React from "react";
+import React, { useState } from "react";
 import { Color } from "three";
 import { Html, Text, useFont, useScroll } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
@@ -35,7 +35,7 @@ const techStack = {
   ThreeJS: [13, "https://d38c2om1h5phmk.cloudfront.net/icons/ThreeJSLogo.png"],
   Node: [14, "https://d38c2om1h5phmk.cloudfront.net/icons/NodeLogo.png"],
   Flutter: [14, "https://d38c2om1h5phmk.cloudfront.net/icons/FlutterLogo.png"],
-  CPP: [15, "https://d38c2om1h5phmk.cloudfront.net/icons/CPPLogo.png"],
+  "C++": [15, "https://d38c2om1h5phmk.cloudfront.net/icons/CPPLogo.png"],
   C: [16, "https://d38c2om1h5phmk.cloudfront.net/icons/CLogo.png"],
   Java: [17, "https://d38c2om1h5phmk.cloudfront.net/icons/JavaLogo.webp"],
   R: [18, "https://d38c2om1h5phmk.cloudfront.net/icons/RLogo.png"],
@@ -43,6 +43,7 @@ const techStack = {
 };
 
 export default function Writing() {
+  const [hover, setHover] = useState("NONE");
   const scroll = useScroll();
 
   return (
@@ -85,7 +86,25 @@ export default function Writing() {
           <div className="stackText">My current tech stack includes:</div>
           <div className="icons">
             {Object.entries(techStack).map(([key, value]) => (
-              <img className="logo" src={value[1]}></img>
+              <div className="logoWrapper">
+                <div
+                  className={
+                    hover == key ? "namePreview" : "namePreview namePreviewHide"
+                  }
+                >
+                  {key}
+                </div>
+                <img
+                  className="logo"
+                  onMouseEnter={(e) => {
+                    setHover(key);
+                  }}
+                  onMouseLeave={() => {
+                    setHover("NONE");
+                  }}
+                  src={value[1]}
+                ></img>
+              </div>
             ))}
           </div>
         </div>

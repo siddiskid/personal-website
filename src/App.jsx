@@ -1,23 +1,23 @@
 import "./App.css";
 import { ScrollControls, Html } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import Room from "./components/Room";
-import { Color } from "three";
-import { Suspense } from "react";
+import { Color, Vector3 } from "three";
 import Writing from "./components/Writing";
+import { Suspense } from "react";
 
 const worldColor = new Color("#0d0015");
 
-// const PosLog = () => {
-//   const cameraWorldPosition = new Vector3();
-//   const { camera } = useThree();
+const PosLog = () => {
+  const cameraWorldPosition = new Vector3();
+  const { camera } = useThree();
 
-//   useFrame(() => {
-//     console.log(camera.getWorldPosition(cameraWorldPosition));
-//     console.log(camera.rotation);
-//   });
-// };
+  useFrame(() => {
+    console.log(camera.getWorldPosition(cameraWorldPosition));
+    console.log(camera.rotation);
+  });
+};
 
 export default function App() {
   return (
@@ -29,7 +29,7 @@ export default function App() {
       }}
       frameloop="demand"
     >
-      {/* <PosLog /> */}
+      <PosLog />
       <color args={[worldColor]} attach={"background"} />
       <Suspense fallback={null}>
         <ScrollControls pages={5}>

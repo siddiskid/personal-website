@@ -3,25 +3,27 @@ import "./styles.css";
 
 export default function Project({ projName, projDesc, projStack }) {
   const logoLookup = {
-    Python: "/icons/PythonLogo.svg",
-    PyTorch: "/icons/PyTorchLogo.png",
-    Tensorflow: "/icons/TensorflowLogo.webp",
-    Numpy: "icons/NumpyLogo.svg",
-    Pandas: "icons/PandasLogo.svg",
-    Matplotlib: "icons/MatplotlibLogo.png",
-    Selenium: "/icons/SeleniumLogo.png",
-    JS: "/icons/JSLogo.png",
-    React: "/icons/ReactLogo.svg",
-    MongoDB: "icons/MongoDBLogo.svg",
-    ExpressJS: "icons/ExpressJSLogo.png",
-    Firebase: "icons/FirebaseLogo.png",
-    ThreeJS: "icons/ThreeJSLogo.png",
-    Flutter: "icons/FlutterLogo.png",
-    "C++": "icons/C++Logo.png",
-    C: "icons/CLogo.png",
-    Java: "/icons/JavaLogo.webp",
-    R: "icons/RLogo.png",
-    Matlab: "icons/MatlabLogo.png",
+    Python: "https://d38c2om1h5phmk.cloudfront.net/icons/PythonLogo.svg",
+    PyTorch: "https://d38c2om1h5phmk.cloudfront.net/icons/PyTorchLogo.png",
+    Tensorflow:
+      "https://d38c2om1h5phmk.cloudfront.net/icons/TensorflowLogo.webp",
+    Numpy: "https://d38c2om1h5phmk.cloudfront.net/icons/NumpyLogo.svg",
+    Pandas: "https://d38c2om1h5phmk.cloudfront.net/icons/PandasLogo.svg",
+    Matplotlib:
+      "https://d38c2om1h5phmk.cloudfront.net/icons/MatplotlibLogo.png",
+    Selenium: "https://d38c2om1h5phmk.cloudfront.net/icons/SeleniumLogo.png",
+    JS: "https://d38c2om1h5phmk.cloudfront.net/icons/JSLogo.png",
+    React: "https://d38c2om1h5phmk.cloudfront.net/icons/ReactLogo.svg",
+    MongoDB: "https://d38c2om1h5phmk.cloudfront.net/icons/MongoDBLogo.svg",
+    ExpressJS: "https://d38c2om1h5phmk.cloudfront.net/icons/ExpressJSLogo.png",
+    Firebase: "https://d38c2om1h5phmk.cloudfront.net/icons/FirebaseLogo.png",
+    ThreeJS: "https://d38c2om1h5phmk.cloudfront.net/icons/ThreeJSLogo.png",
+    Flutter: "https://d38c2om1h5phmk.cloudfront.net/icons/FlutterLogo.png",
+    "C++": "https://d38c2om1h5phmk.cloudfront.net/icons/C++Logo.png",
+    C: "https://d38c2om1h5phmk.cloudfront.net/icons/CLogo.png",
+    Java: "https://d38c2om1h5phmk.cloudfront.net/icons/JavaLogo.webp",
+    R: "https://d38c2om1h5phmk.cloudfront.net/icons/RLogo.png",
+    Matlab: "https://d38c2om1h5phmk.cloudfront.net/icons/MatlabLogo.png",
   };
 
   return (

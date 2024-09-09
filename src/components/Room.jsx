@@ -64,6 +64,8 @@ export default function Room(props) {
   const [currProjDesc, updateCurrProjDesc] = useState("NONE");
   const [currProjStack, updateCurrProjStack] = useState(["NONE"]);
 
+  const [shouldShowScroll, setShouldShowScroll] = useState(true);
+
   const scroll = useScroll();
   useFrame((state, delta) => {
     const offset = scroll.offset;
@@ -84,6 +86,12 @@ export default function Room(props) {
       CAMERA_INITIAL_ROTATION[2] +
         (CAMERA_FINAL_ROTATION[2] - CAMERA_INITIAL_ROTATION[2]) * offset
     );
+
+    setShouldShowScroll(
+      state.camera.position.x == CAMERA_INITIAL_POSITION[0] &&
+        state.camera.position.y == CAMERA_INITIAL_POSITION[1] &&
+        state.camera.position.z == CAMERA_INITIAL_POSITION[2]
+    );
   });
   return (
     <group {...props} dispose={null}>
@@ -92,7 +100,15 @@ export default function Room(props) {
         transform
         portal={{ current: scroll.fixed }}
       >
-        <div className="scrollToNavigate">Scroll to nagivate</div>
+        <div
+          className={
+            shouldShowScroll
+              ? "scrollToNavigate"
+              : "scrollToNavigate scrollToNavigateHide"
+          }
+        >
+          Scroll to navigate
+        </div>
       </Html>
 
       <group
