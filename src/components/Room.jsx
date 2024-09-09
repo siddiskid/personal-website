@@ -52,9 +52,7 @@ const projList = {
 };
 
 export default function Room(props) {
-  const { nodes, materials } = useGLTF(
-    "https://d38c2om1h5phmk.cloudfront.net/models/model.glb"
-  );
+  const { nodes, materials } = useGLTF("./models/table.glb");
   const CAMERA_INITIAL_POSITION = [0, 5.7533, 14.4358];
   const CAMERA_FINAL_POSITION = [0.9772, 5.523, 28.9418];
   const CAMERA_INITIAL_ROTATION = [0.005, 0, 0];
@@ -1164,4 +1162,4 @@ export default function Room(props) {
   );
 }
 
-useGLTF.preload("https://d38c2om1h5phmk.cloudfront.net/models/model.glb");
+useGLTF.preload("/models/table.glb");
