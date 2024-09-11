@@ -53,13 +53,6 @@ const projList = {
 };
 
 export default function Master(props) {
-  useEffect(() => {
-    document.getElementById("root").style.opacity = 1;
-    document.getElementById("root").style.display = "block";
-    document.getElementById("root").style.transitionDuration = "2s";
-    console.log("LOADED");
-  });
-
   const { nodes, materials } = useGLTF("./models/table.glb");
   const CAMERA_INITIAL_POSITION = [0, 5.7533, 14.4358];
   const CAMERA_FINAL_POSITION = [0.9772, 5.523, 28.9418];
@@ -73,9 +66,20 @@ export default function Master(props) {
   const [currProjStack, updateCurrProjStack] = useState(["NONE"]);
 
   const [shouldShowScroll, setShouldShowScroll] = useState(true);
+  const [shouldShowScrollTime, setShouldShowScrollTime] = useState(false);
+
+  const [showIntro1, setShowIntro1] = useState(false);
+  const [showIntro2, setShowIntro2] = useState(false);
+  const [showIntro3, setShowIntro3] = useState(false);
+
+  useEffect(() => {
+    document.getElementById("root").style.opacity = 1;
+    document.getElementById("root").style.display = "block";
+    setTimeout(() => setShouldShowScrollTime(true), 1500);
+  });
 
   const scroll = useScroll();
-  useFrame((state, delta) => {
+  useFrame((state) => {
     const offset = scroll.offset;
 
     state.camera.position.set(
@@ -100,6 +104,18 @@ export default function Master(props) {
         state.camera.position.y == CAMERA_INITIAL_POSITION[1] &&
         state.camera.position.z == CAMERA_INITIAL_POSITION[2]
     );
+
+    if (state.camera.position.x >= 0.0607) {
+      setShowIntro1(true);
+    }
+
+    if (state.camera.position.x >= 0.3391) {
+      setShowIntro2(true);
+    }
+
+    if (state.camera.position.x >= 0.5032) {
+      setShowIntro3(true);
+    }
   });
   return (
     <group {...props} dispose={null}>
@@ -110,7 +126,7 @@ export default function Master(props) {
       >
         <div
           className={
-            shouldShowScroll
+            shouldShowScroll & shouldShowScrollTime
               ? "scrollToNavigate"
               : "scrollToNavigate scrollToNavigateHide"
           }
@@ -1182,7 +1198,11 @@ export default function Master(props) {
         <meshBasicMaterial color={tableBloomColor} toneMapped={false} />
       </mesh>
       <Stars />
-      <Writing />
+      <Writing
+        showIntro1={showIntro1}
+        showIntro2={showIntro2}
+        showIntro3={showIntro3}
+      />
     </group>
   );
 }

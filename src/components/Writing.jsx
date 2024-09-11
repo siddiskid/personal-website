@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Color } from "three";
 import { Html, useFont, useScroll } from "@react-three/drei";
+import { useFrame } from "react-three-fiber";
 
 const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
@@ -40,7 +41,7 @@ const techStack = {
   Matlab: [19, "https://d38c2om1h5phmk.cloudfront.net/icons/MatlabLogo.png"],
 };
 
-export default function Writing() {
+export default function Writing({ showIntro1, showIntro2, showIntro3 }) {
   const [hover, setHover] = useState("NONE");
   const scroll = useScroll();
 
@@ -54,7 +55,22 @@ export default function Writing() {
         portal={{ current: scroll.fixed }}
         scale={0.125}
       >
-        <div className="helloText">Hey, I'm Siddarth</div>
+        <div className="helloText">
+          <span>H</span>
+          <span>e</span>
+          <span>y</span>
+          <span>,</span> <span>I</span>
+          <span>'</span>
+          <span>m</span> <span>S</span>
+          <span>i</span>
+          <span>d</span>
+          <span>d</span>
+          <span>a</span>
+          <span>r</span>
+          <span>t</span>
+          <span>h</span>
+          {/* <span>Hey,</span> <span>I'm</span> <span>Siddarth</span> */}
+        </div>
       </Html>
       <Html
         position-x={7.005}
@@ -65,10 +81,11 @@ export default function Writing() {
         portal={{ current: scroll.fixed }}
         scale={0.125}
       >
-        <div className="introText">
-          I am a passionate developer with keen interests <br />
-          in Artificial Intelligence, Quantum Computing, <br />
-          and Computational Physics and Astrophysics
+        <div className={showIntro1 ? "introText" : "introText hiddenIntroText"}>
+          <span>I am a passionate developer with keen interests </span>
+          <br />
+          <span>in Artificial Intelligence, Quantum Computing,</span> <br />
+          <span>and Computational Physics and Astrophysics</span>
         </div>
       </Html>
       <Html
@@ -80,8 +97,14 @@ export default function Writing() {
         portal={{ current: scroll.fixed }}
         scale={0.125}
       >
-        <div className="stackWrapper">
-          <div className="stackText">My current tech stack includes:</div>
+        <div
+          className={
+            showIntro2 ? "stackWrapper" : "stackWrapper hiddenStackWrapper"
+          }
+        >
+          <span>
+            <div className="stackText">My current tech stack includes</div>
+          </span>
           <div className="icons">
             {Object.entries(techStack).map(([key, value]) => (
               <div className="logoWrapper">
@@ -92,16 +115,18 @@ export default function Writing() {
                 >
                   {key}
                 </div>
-                <img
-                  className="logo"
-                  onMouseEnter={(e) => {
-                    setHover(key);
-                  }}
-                  onMouseLeave={() => {
-                    setHover("NONE");
-                  }}
-                  src={value[1]}
-                ></img>
+                <span>
+                  <img
+                    className="logo"
+                    onMouseEnter={(e) => {
+                      setHover(key);
+                    }}
+                    onMouseLeave={() => {
+                      setHover("NONE");
+                    }}
+                    src={value[1]}
+                  ></img>
+                </span>
               </div>
             ))}
           </div>
@@ -116,7 +141,9 @@ export default function Writing() {
         portal={{ current: scroll.fixed }}
         scale={0.125}
       >
-        <div className="projectsText">Here's some of my projects...</div>
+        <div className={showIntro3 ? "projectsText" : "hiddenProjectsText"}>
+          <span>Here are some of my projects...</span>
+        </div>
       </Html>
       {/* <Text
         position-x={0}
