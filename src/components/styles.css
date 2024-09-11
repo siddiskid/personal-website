@@ -22,6 +22,12 @@
   width: 10px;
 }
 
+.hiddenRoot {
+  display: "none";
+  opacity: 0;
+  transition-duration: 2s;
+}
+
 .wrapper {
   font-family: "Roboto-Light";
   font-size: 10px;
@@ -40,6 +46,8 @@
 }
 
 a {
+  color: #fff;
+  text-shadow: 0 0 1px #fff;
   text-decoration: none;
   transition-duration: 100ms;
 }

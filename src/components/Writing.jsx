@@ -1,8 +1,6 @@
-import { TextureLoader } from "three";
 import React, { useState } from "react";
 import { Color } from "three";
-import { Html, Text, useFont, useScroll } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
+import { Html, useFont, useScroll } from "@react-three/drei";
 
 const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
