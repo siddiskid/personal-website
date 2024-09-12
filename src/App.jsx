@@ -2,12 +2,14 @@ import "./App.css";
 import { ScrollControls, GradientTexture } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import Master from "./components/Master";
+// import Master from "./components/Master";
 import { Color } from "three";
-import { Suspense, useState } from "react";
+import { Suspense, useState, lazy } from "react";
 import Loader from "./components/Loader";
 import "./components/styles/master.css";
 import "./components/styles/cursor.css";
+
+const Master = lazy(() => import("./components/Master.jsx"));
 
 const worldColor = new Color("#0d0015");
 
