@@ -1,5 +1,5 @@
 import "./App.css";
-import { ScrollControls } from "@react-three/drei";
+import { ScrollControls, GradientTexture } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import Master from "./components/Master";
@@ -53,7 +53,7 @@ export default function App() {
         <ScrollControls pages={5}>
           <Master cursor={cursor} />
         </ScrollControls>
-        <directionalLight position={[0.485, 5.41, 6.731]} intensity={1} />
+        <directionalLight position={[0.485, 5.41, 6.731]} intensity={1.5} />
         <ambientLight intensity={0.1} />
         <EffectComposer>
           <Bloom mipmapBlur intensity={2} luminanceThreshold={1} />

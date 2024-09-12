@@ -738,9 +738,9 @@ export default function KeyboardMouse({ nodes, materials }) {
       <mesh
         geometry={nodes.Cylinder071.geometry}
         material={nodes.Cylinder071.material}
-        position={[1.197, 3.684, 34.657]}
+        position={[1.187, 3.684, 34.657]}
         rotation={[Math.PI, 0.128, Math.PI / 2]}
-        scale={[0.01, 6.499, 0.013]}
+        scale={[0.01, 6.549, 0.013]}
       >
         <meshBasicMaterial color={keyboardBloomColor} toneMapped={false} />
       </mesh>
