@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Color } from "three";
-import "./styles.css";
 import { useFrame } from "@react-three/fiber";
 
 let randomCoords = Array.from({ length: 1000 }, () => [
@@ -9,24 +8,23 @@ let randomCoords = Array.from({ length: 1000 }, () => [
   Math.floor(Math.random() * 100 - 50),
 ]);
 
+const farPoint = Math.sqrt(50 ** 2 + 100 ** 2 + 50 ** 2);
+
 let dbn = -0.01;
 let dbm = 0.01;
 let dbf = -0.01;
 
-const farPoint = Math.sqrt(50 ** 2 + 100 ** 2 + 50 ** 2);
-
-export default function Room(props) {
+export default function Stars() {
   const [bloomNear, setbloomNear] = useState(1);
   const [bloomMed, setbloomMed] = useState(0.66);
   const [bloomFar, setbloomFar] = useState(0.33);
 
   const starsBloomColorNear = new Color("#ffffff");
-  starsBloomColorNear.multiplyScalar(bloomNear);
-
   const starsBloomColorMed = new Color("#ffffff");
-  starsBloomColorMed.multiplyScalar(bloomMed);
-
   const starsBloomColorFar = new Color("#ffffff");
+
+  starsBloomColorNear.multiplyScalar(bloomNear);
+  starsBloomColorMed.multiplyScalar(bloomMed);
   starsBloomColorFar.multiplyScalar(bloomFar);
 
   useFrame(() => {

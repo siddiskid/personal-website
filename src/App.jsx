@@ -1,11 +1,13 @@
 import "./App.css";
-import { ScrollControls, useProgress, useScroll } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { ScrollControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import Master from "./components/Master";
-import { Color, Vector3 } from "three";
-import { Suspense } from "react";
+import { Color } from "three";
+import { Suspense, useState } from "react";
 import Loader from "./components/Loader";
+import "./components/styles/master.css";
+import "./components/styles/cursor.css";
 
 const worldColor = new Color("#0d0015");
 
@@ -18,6 +20,22 @@ const worldColor = new Color("#0d0015");
 //     console.log(camera.rotation);
 //   });
 // };
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 25) + "px; left: " + (e.pageX - 25) + "px;"
+  );
+});
+
+document.addEventListener("click", (e) => {
+  cursor.classList.add("expand");
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
+});
 
 export default function App() {
   return (
@@ -33,9 +51,8 @@ export default function App() {
         {/* <PosLog /> */}
         <color args={[worldColor]} attach={"background"} />
         <ScrollControls pages={5}>
-          <Master />
+          <Master cursor={cursor} />
         </ScrollControls>
-
         <directionalLight position={[0.485, 5.41, 6.731]} intensity={1} />
         <ambientLight intensity={0.1} />
         <EffectComposer>
