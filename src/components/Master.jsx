@@ -243,6 +243,7 @@ export default function Master(props) {
                       props.cursor.classList.remove("fill");
                     }}
                     href={value[0]}
+                    target = "_blank"
                   >
                     {key}
                   </a>
