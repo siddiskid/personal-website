@@ -33,7 +33,7 @@ const techStack = {
   ThreeJS: [13, "../../public/icons/ThreeJSLogo.png"],
   Node: [14, "../../public/icons/NodeLogo.png"],
   Flutter: [14, "../../public/icons/FlutterLogo.png"],
-  "C++": [15, "../../public/icons/C++Logo.png"],
+  "C++": [15, "https://github.com/siddiskid/personal-website/blob/2571235df4af7dddbeb164a28d079853df1a9d09/public/icons/C++Logo.png"],
   C: [16, "../../public/icons/CLogo.png"],
   Java: [17, "../../public/icons/JavaLogo.webp"],
   R: [18, "../../public/icons/RLogo.png"],
