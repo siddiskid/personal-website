@@ -6,45 +6,45 @@ const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
 
 const techStack = {
-  Python: [1, "https://d38c2om1h5phmk.cloudfront.net/icons/PythonLogo.svg"],
-  PyTorch: [2, "https://d38c2om1h5phmk.cloudfront.net/icons/PyTorchLogo.png"],
+  Python: [1, "../../public/icons/PythonLogo.svg"],
+  PyTorch: [2, "../../public/icons/PyTorchLogo.png"],
   Tensorflow: [
     3,
-    "https://d38c2om1h5phmk.cloudfront.net/icons/TensorflowLogo.webp",
+    "../../public/icons/TensorflowLogo.webp",
   ],
-  Numpy: [4, "https://d38c2om1h5phmk.cloudfront.net/icons/NumpyLogo.svg"],
-  Pandas: [5, "https://d38c2om1h5phmk.cloudfront.net/icons/PandasLogo.svg"],
+  Numpy: [4, "../../public/icons/NumpyLogo.svg"],
+  Pandas: [5, "../../public/icons/PandasLogo.svg"],
   Matplotlib: [
     6,
-    "https://d38c2om1h5phmk.cloudfront.net/icons/MatplotlibLogo.png",
+    "../../public/icons/MatplotlibLogo.png",
   ],
-  Selenium: [7, "https://d38c2om1h5phmk.cloudfront.net/icons/SeleniumLogo.png"],
-  JavaScript: [8, "https://d38c2om1h5phmk.cloudfront.net/icons/JSLogo.png"],
-  React: [9, "https://d38c2om1h5phmk.cloudfront.net/icons/ReactLogo.png"],
-  MongoDB: [10, "https://d38c2om1h5phmk.cloudfront.net/icons/MongoDBLogo.svg"],
+  Selenium: [7, "../../public/icons/SeleniumLogo.png"],
+  JavaScript: [8, "../../public/icons/JSLogo.png"],
+  React: [9, "../../public/icons/ReactLogo.svg"],
+  MongoDB: [10, "../../public/icons/MongoDBLogo.svg"],
   ExpressJS: [
     11,
-    "https://d38c2om1h5phmk.cloudfront.net/icons/ExpressJSLogo.png",
+    "../../public/icons/ExpressJSLogo.png",
   ],
   Firebase: [
     12,
-    "https://d38c2om1h5phmk.cloudfront.net/icons/FirebaseLogo.png",
+    "../../public/icons/FirebaseLogo.png",
   ],
-  ThreeJS: [13, "https://d38c2om1h5phmk.cloudfront.net/icons/ThreeJSLogo.png"],
-  Node: [14, "https://d38c2om1h5phmk.cloudfront.net/icons/NodeLogo.png"],
-  Flutter: [14, "https://d38c2om1h5phmk.cloudfront.net/icons/FlutterLogo.png"],
-  "C++": [15, "https://d38c2om1h5phmk.cloudfront.net/icons/CPPLogo.png"],
-  C: [16, "https://d38c2om1h5phmk.cloudfront.net/icons/CLogo.png"],
-  Java: [17, "https://d38c2om1h5phmk.cloudfront.net/icons/JavaLogo.webp"],
-  R: [18, "https://d38c2om1h5phmk.cloudfront.net/icons/RLogo.png"],
-  Matlab: [19, "https://d38c2om1h5phmk.cloudfront.net/icons/MatlabLogo.png"],
+  ThreeJS: [13, "../../public/icons/ThreeJSLogo.png"],
+  Node: [14, "../../public/icons/NodeLogo.png"],
+  Flutter: [14, "../../public/icons/FlutterLogo.png"],
+  "C++": [15, "../../public/icons/C++Logo.png"],
+  C: [16, "../../public/icons/CLogo.png"],
+  Java: [17, "../../public/icons/JavaLogo.webp"],
+  R: [18, "../../public/icons/RLogo.png"],
+  Matlab: [19, "../../public/icons/MatlabLogo.png"],
 };
 
 const contactLogos = {
-  Github: "https://d38c2om1h5phmk.cloudfront.net/icons/GithubLogo.png",
-  Linkedin: "https://d38c2om1h5phmk.cloudfront.net/icons/LinkedinLogo.png",
-  Instagram: "https://d38c2om1h5phmk.cloudfront.net/icons/InstagramLogo.png",
-  Email: "https://d38c2om1h5phmk.cloudfront.net/icons/EmailLogo.png",
+  Github: "../../public/icons/GithubLogo.png",
+  Linkedin: "../../public/icons/LinkedinLogo.webp",
+  Instagram: "../../public/icons/InstagramLogo.png",
+  Email: "../../public/icons/EmailLogo.png",
 };
 
 export default function Texts({ showIntro1, showIntro2, showIntro3, cursor }) {
@@ -110,7 +110,7 @@ export default function Texts({ showIntro1, showIntro2, showIntro3, cursor }) {
                 onMouseLeave={() => {
                   cursor.classList.remove("fill");
                 }}
-                className="contactLogo"
+                className="contactLogo linkedinLogo"
                 src={contactLogos["Linkedin"]}
               ></img>
             </a>

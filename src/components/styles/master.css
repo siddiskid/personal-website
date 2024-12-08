@@ -181,6 +181,12 @@ a:hover {
   width: 80px;
 }
 
+.linkedinLogo {
+  object-fit: cover;
+  width: 80px;
+  margin-left: 10px;
+}
+
 .emailLogo {
   object-fit: cover;
   width: 90px;
