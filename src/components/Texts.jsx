@@ -6,45 +6,45 @@ const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
 
 const techStack = {
-  Python: [1, "../../public/icons/PythonLogo.svg"],
-  PyTorch: [2, "../../public/icons/PyTorchLogo.png"],
+  Python: [1, "https://storage.cloud.google.com/coolest_images_bucket/PythonLogo.svg"],
+  PyTorch: [2, "https://storage.cloud.google.com/coolest_images_bucket/PyTorchLogo.png"],
   Tensorflow: [
     3,
-    "../../public/icons/TensorflowLogo.webp",
+    "https://storage.cloud.google.com/coolest_images_bucket/TensorflowLogo.webp",
   ],
-  Numpy: [4, "../../public/icons/NumpyLogo.svg"],
-  Pandas: [5, "../../public/icons/PandasLogo.svg"],
+  Numpy: [4, "https://storage.cloud.google.com/coolest_images_bucket/NumpyLogo.svg"],
+  Pandas: [5, "https://storage.cloud.google.com/coolest_images_bucket/PandasLogo.svg"],
   Matplotlib: [
     6,
-    "../../public/icons/MatplotlibLogo.png",
+    "https://storage.cloud.google.com/coolest_images_bucket/MatplotlibLogo.png",
   ],
-  Selenium: [7, "../../public/icons/SeleniumLogo.png"],
-  JavaScript: [8, "../../public/icons/JSLogo.png"],
-  React: [9, "../../public/icons/ReactLogo.svg"],
-  MongoDB: [10, "../../public/icons/MongoDBLogo.svg"],
+  Selenium: [7, "https://storage.cloud.google.com/coolest_images_bucket/SeleniumLogo.png"],
+  JavaScript: [8, "https://storage.cloud.google.com/coolest_images_bucket/JSLogo.png"],
+  React: [9, "https://storage.cloud.google.com/coolest_images_bucket/ReactLogo.svg"],
+  MongoDB: [10, "https://storage.cloud.google.com/coolest_images_bucket/MongoDBLogo.svg"],
   ExpressJS: [
     11,
-    "../../public/icons/ExpressJSLogo.png",
+    "https://storage.cloud.google.com/coolest_images_bucket/ExpressJSLogo.png",
   ],
   Firebase: [
     12,
-    "../../public/icons/FirebaseLogo.png",
+    "https://storage.cloud.google.com/coolest_images_bucket/FirebaseLogo.png",
   ],
-  ThreeJS: [13, "../../public/icons/ThreeJSLogo.png"],
-  Node: [14, "../../public/icons/NodeLogo.png"],
-  Flutter: [14, "../../public/icons/FlutterLogo.png"],
+  ThreeJS: [13, "https://storage.cloud.google.com/coolest_images_bucket/ThreeJSLogo.png"],
+  Node: [14, "https://storage.cloud.google.com/coolest_images_bucket/NodeLogo.png"],
+  Flutter: [14, "https://storage.cloud.google.com/coolest_images_bucket/FlutterLogo.png"],
   "C++": [15, "https://storage.cloud.google.com/coolest_images_bucket/C%2B%2BLogo.png"],
   C: [16, "https://storage.cloud.google.com/coolest_images_bucket/CLogo.png"],
-  Java: [17, "../../public/icons/JavaLogo.webp"],
-  R: [18, "../../public/icons/RLogo.png"],
-  Matlab: [19, "../../public/icons/MatlabLogo.png"],
+  Java: [17, "https://storage.cloud.google.com/coolest_images_bucket/JavaLogo.webp"],
+  R: [18, "https://storage.cloud.google.com/coolest_images_bucket/RLogo.png"],
+  Matlab: [19, "https://storage.cloud.google.com/coolest_images_bucket/MatlabLogo.png"],
 };
 
 const contactLogos = {
-  Github: "../../public/icons/GithubLogo.png",
-  Linkedin: "../../public/icons/LinkedinLogo.webp",
-  Instagram: "../../public/icons/InstagramLogo.png",
-  Email: "../../public/icons/EmailLogo.png",
+  Github: "https://storage.cloud.google.com/coolest_images_bucket/GithubLogo.png",
+  Linkedin: "https://storage.cloud.google.com/coolest_images_bucket/LinkedinLogo.webp",
+  Instagram: "https://storage.cloud.google.com/coolest_images_bucket/InstagramLogo.png",
+  Email: "https://storage.cloud.google.com/coolest_images_bucket/EmailLogo.png",
 };
 
 export default function Texts({ showIntro1, showIntro2, showIntro3, cursor }) {
