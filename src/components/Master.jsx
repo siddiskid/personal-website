@@ -64,7 +64,7 @@ export default function Master(props) {
   const [showIntro2, setShowIntro2] = useState(false);
   const [showIntro3, setShowIntro3] = useState(false);
 
-  const [rotate, setRotate] = useState(false);
+  const [valid, setValid] = useState(false);
 
   const scroll = useScroll();
 
@@ -75,7 +75,7 @@ export default function Master(props) {
   });
 
   useFrame((state) => {
-    setRotate(window.innerWidth < window.innerHeight);
+    setValid(window.innerWidth < window.innerHeight);
 
     const offset = scroll.offset;
 
@@ -117,15 +117,14 @@ export default function Master(props) {
 
   return (
     <group {...props} dispose={null}>
-      {rotate ? (
+      {valid ? (
         <Html
-          position={[0, 5.7533, 0]}
+          position={[-0.25, 6.5533, 0]}
           transform
           portal={{ current: scroll.fixed }}
         >
           <div className="rotateScreenWrapper">
-            <img src="https://d38c2om1h5phmk.cloudfront.net/Rotate.gif"></img>
-            <div className="rotateScreenText">Rotate your device to start</div>
+            <div className="rotateScreenText">Work in progress for mobile version!</div>
           </div>
         </Html>
       ) : (

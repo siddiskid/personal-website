@@ -1,4 +1,3 @@
-import React from "react";
 import { Color } from "three";
 
 const keyboardBloomColor = new Color("ffffff");

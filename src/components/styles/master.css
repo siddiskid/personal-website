@@ -29,6 +29,7 @@
 }
 
 .rotateScreenWrapper {
+  padding: 15px 10px 15px 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -37,18 +38,11 @@
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
-
-.rotateScreen {
-  width: 100px;
-  height: 10px;
-}
-
 .rotateScreenText {
   font-family: "Roboto-Light";
   font-size: 10px;
   color: #fff;
   text-shadow: 0 0 1px #fff;
-  margin-bottom: 25px;
 }
 
 .scrollToNavigate {

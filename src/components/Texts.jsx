@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Color } from "three";
 import { Html, useScroll } from "@react-three/drei";
 

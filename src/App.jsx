@@ -1,10 +1,10 @@
 import "./App.css";
-import { ScrollControls, GradientTexture } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { ScrollControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 // import Master from "./components/Master";
 import { Color } from "three";
-import { Suspense, useState, lazy } from "react";
+import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import "./components/styles/master.css";
 import "./components/styles/cursor.css";
@@ -32,7 +32,7 @@ document.addEventListener("mousemove", (e) => {
   );
 });
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", () => {
   cursor.classList.add("expand");
   setTimeout(() => {
     cursor.classList.remove("expand");
