@@ -26,7 +26,7 @@ const projList = {
   worklearn_scraper: [
     "https://github.com/siddiskid/worklearn_scraper",
     "A web scraping application used to get job listing data from careers online on an excel sheet. Built to save time on reading job requirements and spend that on actually applying to jobs",
-    ["Python", "Pandas", "Selenium"],
+    ["Python", "Selenium", "Pandas"],
   ],
   "Ryu's Conquest": [
     "https://github.com/siddiskid/Snakes-and-Hackers-II",
@@ -119,7 +119,7 @@ export default function Master(props) {
     <group {...props} dispose={null}>
       {valid ? (
         <Html
-          position={[-0.25, 6.5533, 0]}
+          position={[0, 6.5533, 0]}
           transform
           portal={{ current: scroll.fixed }}
         >
