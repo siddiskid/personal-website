@@ -13,7 +13,7 @@ const logoLookup = {
   Firebase: "icons/FirebaseLogo.png",
   ThreeJS: "icons/ThreeJSLogo.png",
   Flutter: "icons/FlutterLogo.png",
-  "C++": "icons/C++Logo.png",
+  "C++": "https://storage.cloud.google.com/coolest_images_bucket/C%2B%2BLogo.png",
   C: "icons/CLogo.png",
   Java: "icons/JavaLogo.webp",
   R: "icons/RLogo.png",
