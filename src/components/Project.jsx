@@ -1,24 +1,4 @@
-const logoLookup = {
-  Python: "icons/PythonLogo.svg",
-  PyTorch: "icons/PyTorchLogo.png",
-  Tensorflow: "icons/TensorflowLogo.webp",
-  Numpy: "icons/NumpyLogo.svg",
-  Pandas: "icons/PandasLogo.svg",
-  Matplotlib: "icons/MatplotlibLogo.png",
-  Selenium: "icons/SeleniumLogo.png",
-  JS: "icons/JSLogo.png",
-  React: "icons/ReactLogo.svg",
-  MongoDB: "icons/MongoDBLogo.svg",
-  ExpressJS: "icons/ExpressJSLogo.png",
-  Firebase: "icons/FirebaseLogo.png",
-  ThreeJS: "icons/ThreeJSLogo.png",
-  Flutter: "icons/FlutterLogo.png",
-  "C++": "https://storage.cloud.google.com/coolest_images_bucket/C%2B%2BLogo.png",
-  C: "icons/CLogo.png",
-  Java: "icons/JavaLogo.webp",
-  R: "icons/RLogo.png",
-  Matlab: "icons/MatlabLogo.png",
-};
+import { logoLookup } from "../data";
 
 export default function Project({ projName, projDesc, projStack }) {
   return (

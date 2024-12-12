@@ -1,51 +1,10 @@
 import { useState } from "react";
 import { Color } from "three";
 import { Html, useScroll } from "@react-three/drei";
+import { techStack, contactLogos } from "../data";
 
 const textBloomColor = new Color("#fff");
 textBloomColor.multiplyScalar(1.5);
-
-const techStack = {
-  Python: [1, "icons/PythonLogo.svg"],
-  PyTorch: [2, "icons/PyTorchLogo.png"],
-  Tensorflow: [
-    3,
-    "icons/TensorflowLogo.webp",
-  ],
-  Numpy: [4, "icons/NumpyLogo.svg"],
-  Pandas: [5, "icons/PandasLogo.svg"],
-  Matplotlib: [
-    6,
-    "icons/MatplotlibLogo.png",
-  ],
-  Selenium: [7, "icons/SeleniumLogo.png"],
-  JavaScript: [8, "icons/JSLogo.png"],
-  React: [9, "icons/ReactLogo.svg"],
-  MongoDB: [10, "icons/MongoDBLogo.svg"],
-  ExpressJS: [
-    11,
-    "icons/ExpressJSLogo.png",
-  ],
-  Firebase: [
-    12,
-    "icons/FirebaseLogo.png",
-  ],
-  ThreeJS: [13, "icons/ThreeJSLogo.png"],
-  Node: [14, "icons/NodeLogo.png"],
-  Flutter: [14, "icons/FlutterLogo.png"],
-  "C++": [15, "icons/C++Logo.png"],
-  C: [16, "icons/CLogo.png"],
-  Java: [17, "icons/JavaLogo.webp"],
-  R: [18, "icons/RLogo.png"],
-  Matlab: [19, "icons/MatlabLogo.png"],
-};
-
-const contactLogos = {
-  Github: "icons/GithubLogo.png",
-  Linkedin: "icons/LinkedinLogo.webp",
-  Instagram: "icons/InstagramLogo.png",
-  Email: "icons/EmailLogo.png",
-};
 
 export default function Texts({ showIntro1, showIntro2, showIntro3, cursor }) {
   const [hover, setHover] = useState("NONE");
