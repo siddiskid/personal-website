@@ -2,6 +2,8 @@ import { logoLookup } from "../data";
 
 export default function Project({ projName, projDesc, projStack }) {
   return (
+  <>
+    {/* <div className="projectBackground"></div> */}
     <div className="project">
       <div className="projectWrapper">
         <div
@@ -24,5 +26,6 @@ export default function Project({ projName, projDesc, projStack }) {
         </div>
       </div>
     </div>
+  </>
   );
 }

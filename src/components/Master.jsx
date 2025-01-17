@@ -180,7 +180,6 @@ export default function Master(props) {
           >
             <meshBasicMaterial color={monitorBloomColor} toneMapped={false} />
           </mesh>
-          <meshStandardMaterial />
           <Html
             position={[-3.85, 6.017, 35.726]}
             rotation={[0, 2.9, 0]}

@@ -71,10 +71,20 @@
   transition-duration: 1s;
 }
 
+/* .projectBackground {
+  position: absolute;
+  z-index: -1;
+  width: 1260px;
+  height: 703.125px;
+  background-color: #F1F2EE;
+  -webkit-filter: blur(3px);
+} */
+
 .project {
   width: 1260px;
   height: 703.125px;
-  background-color: #ffffff;
+  /* background-color: #14091a; */
+  background-color: #F1F2EE;
   display: flex;
   flex-direction: column;
   justify-content: center;
