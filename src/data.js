@@ -1,8 +1,18 @@
 export const projList = {
+  "Stock Price Predictor": [
+    "https://github.com/siddiskid/stock_price_predictior",
+    "",
+    ["Python", "PyTorch", "SKLearn", "JS", "React"]
+  ],
+  AI: [
+    "https://github.com/siddiskid/AI",
+    "",
+    ["Python", "PyTorch", "Matplotlib"]
+  ],
   micrograd_plus: [
     "https://github.com/siddiskid/micrograd_plus",
     "Inspired by Andrej Karpathy's micrograd, micrograd_plus is an autograd engine over scalar-valued Directed Acyclic Graphs. It extends micrograd by implementing additional activation functions, like sigmoid and relu, in addition to the included tanh along with a draw function that draws a DAG with all neurons and their gradients. micrograd_plus can be used to make neural networks for binary classification tasks",
-    ["Python", "PyTorch", "Tensorflow"],
+    ["Python", "PyTorch"],
   ],
   worklearn_scraper: [
     "https://github.com/siddiskid/worklearn_scraper",
@@ -30,6 +40,7 @@ export const logoLookup = {
   Python: "icons/PythonLogo.svg",
   PyTorch: "icons/PyTorchLogo.png",
   Tensorflow: "icons/TensorflowLogo.webp",
+  SKLearn: "icons/SKLearnLogo.svg",
   Numpy: "icons/NumpyLogo.svg",
   Pandas: "icons/PandasLogo.svg",
   Matplotlib: "icons/MatplotlibLogo.png",
@@ -51,36 +62,37 @@ export const logoLookup = {
 export const techStack = {
   Python: [1, "icons/PythonLogo.svg"],
   PyTorch: [2, "icons/PyTorchLogo.png"],
+  "scikit-learn": [3, "icons/SKLearnLogo.svg"],
   Tensorflow: [
-    3,
+    4,
     "icons/TensorflowLogo.webp",
   ],
-  Numpy: [4, "icons/NumpyLogo.svg"],
-  Pandas: [5, "icons/PandasLogo.svg"],
+  Numpy: [5, "icons/NumpyLogo.svg"],
+  Pandas: [6, "icons/PandasLogo.svg"],
   Matplotlib: [
-    6,
+    7,
     "icons/MatplotlibLogo.png",
   ],
-  Selenium: [7, "icons/SeleniumLogo.png"],
-  JavaScript: [8, "icons/JSLogo.png"],
-  React: [9, "icons/ReactLogo.svg"],
-  MongoDB: [10, "icons/MongoDBLogo.svg"],
+  Selenium: [8, "icons/SeleniumLogo.png"],
+  JavaScript: [9, "icons/JSLogo.png"],
+  React: [10, "icons/ReactLogo.svg"],
+  MongoDB: [11, "icons/MongoDBLogo.svg"],
   ExpressJS: [
-    11,
+    12,
     "icons/ExpressJSLogo.png",
   ],
   Firebase: [
-    12,
+    13,
     "icons/FirebaseLogo.png",
   ],
-  ThreeJS: [13, "icons/ThreeJSLogo.png"],
-  Node: [14, "icons/NodeLogo.png"],
-  Flutter: [14, "icons/FlutterLogo.png"],
-  "C++": [15, "icons/C++Logo.png"],
-  C: [16, "icons/CLogo.png"],
-  Java: [17, "icons/JavaLogo.webp"],
-  R: [18, "icons/RLogo.png"],
-  Matlab: [19, "icons/MatlabLogo.png"],
+  ThreeJS: [14, "icons/ThreeJSLogo.png"],
+  Node: [15, "icons/NodeLogo.png"],
+  Flutter: [16, "icons/FlutterLogo.png"],
+  "C++": [17, "icons/C++Logo.png"],
+  C: [18, "icons/CLogo.png"],
+  Java: [19, "icons/JavaLogo.webp"],
+  R: [20, "icons/RLogo.png"],
+  Matlab: [21, "icons/MatlabLogo.png"],
 };
 
 export const contactLogos = {
