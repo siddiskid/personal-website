@@ -84,7 +84,7 @@
   width: 1260px;
   height: 703.125px;
   /* background-color: #14091a; */
-  background-color: #F1F2EE;
+  background-color: #f1f2ee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,6 +143,25 @@ a:hover {
   height: 160px;
   overflow: auto;
   transform: scale(4);
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.projectListWrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.projectListWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projectListWrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.projectListWrapper:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .projectListText {
